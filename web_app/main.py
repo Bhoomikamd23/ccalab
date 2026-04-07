@@ -1,7 +1,7 @@
 from flask import Flask, render_template
 
 # CRITICAL: Use double underscores __ on both sides of name
-app = Flask(__name__)
+app = Flask( __name__ )
 
 @app.route('/')
 def home():
