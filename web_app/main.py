@@ -1,10 +1,12 @@
 from flask import Flask, render_template
 
-app = Flask(__name__)  # Changed _name_ to __name__
+# CRITICAL: Use double underscores __ on both sides of name
+app = Flask(__name__)
 
 @app.route('/')
 def home():
     return render_template('index.html', title="Home page")
 
-if __name__ == '__main__': # This also requires double underscores
+# CRITICAL: Use double underscores for __name__ and __main__
+if __name__ == '__main__':
     app.run(host='127.0.0.1', port=8080, debug=True)
